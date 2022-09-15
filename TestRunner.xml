@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <classes>
+  <class name="TestCases.Post_create"/>
+  <class name="TestCases.Post_login_success"/>
+  <class name="TestCases.Post_login_unsuccess"/>
+  <class name="TestCases.Post_register_success"/>
+  <class name="TestCases.Post_register_unsuccess"/>
+  <class name="TestCases.Get_list_users"/>
+  <class name="TestCases.Get_single_user"/>
+  <class name="TestCases.Get_single_user_notfound"/>
+  <class name="TestCases.Get_list_resource"/>
+  <class name="TestCases.Get_single_resource"/>
+  <class name="TestCases.Get_single_resource_notfound"/>
+  <class name="TestCases.Get_delayed_response"/>
+  <class name="TestCases.Put_update_user_Patch"/>
+  <class name="TestCases.Delete_user"/>
+  </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
