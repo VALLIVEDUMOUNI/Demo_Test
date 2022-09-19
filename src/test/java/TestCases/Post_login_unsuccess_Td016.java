@@ -1,6 +1,5 @@
 package TestCases;
 
-import java.io.File;
 import java.io.IOException;
 
 import org.testng.annotations.Test;
@@ -9,24 +8,24 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import jxl.Cell;
-import jxl.Sheet;
-import jxl.Workbook;
 import jxl.read.biff.BiffException;
 import utilities.excel;
 
-public class Post_login_unsuccess {
+public class Post_login_unsuccess_Td016 {
   @Test
-  public void POST() throws BiffException, IOException {
+  public void Td016() throws BiffException, IOException {
 	  excel e = new excel();
 	  e.open("C:\\Users\\Vallivedu Mounika\\eclipse-workspace\\Api\\src\\test\\java\\TestData.xls");
-	  String baseURI = e.readexcel(1, 18);
+	  String baseURI = e.readexcel(1, 14);
 	  RestAssured.baseURI = baseURI;
-	  String endpoint = e.readexcel(6,14);
-	  String email = e.readexcel(3,14);
-	  String j = "{\n"
-	            + "    \"email\": \""+ email +"\"\n"
-	            + "}";
+	  String endpoint = e.readexcel(6,21);
+	  String email = e.readexcel(3,21);
+	  String password = e.readexcel(4,21);
+
+      String j = "{\n"
+              + "    \"email\": \""+ email +"\",\n"
+              + "    \"password\": \""+ password + "\"\n"
+              + "}";
 	  RequestSpecification requestSpecification= RestAssured.given();
       requestSpecification.contentType(ContentType.JSON);
       requestSpecification.body(j);

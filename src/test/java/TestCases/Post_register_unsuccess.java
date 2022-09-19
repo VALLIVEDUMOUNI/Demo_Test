@@ -20,10 +20,10 @@ public class Post_register_unsuccess {
   public void POST() throws BiffException, IOException {
 	  excel e = new excel();
 	  e.open("C:\\Users\\Vallivedu Mounika\\eclipse-workspace\\Api\\src\\test\\java\\TestData.xls");
-	  String baseURI = e.readexcel(1, 18);
+	  String baseURI = e.readexcel(1, 14);
 	  RestAssured.baseURI = baseURI;
-	  String endpoint = e.readexcel(6,12);
-	  String email = e.readexcel(3,12);
+	  String endpoint = e.readexcel(6,24);
+	  String email = e.readexcel(3,24);
 	  String j = "{\n"
               + "    \"email\": \""+ email + "\"\n"
               + "}";

@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import jxl.Cell;
@@ -21,13 +22,18 @@ public class Get_list_users {
   public void GET() throws BiffException, IOException {
 	  excel e = new excel();
 	  e.open("C:\\Users\\Vallivedu Mounika\\eclipse-workspace\\Api\\src\\test\\java\\TestData.xls");
-	  String baseURI = e.readexcel(1, 18);
+	  String filepath = "C:\\Users\\Vallivedu Mounika\\eclipse-workspace\\Api\\src\\test\\java\\Responsejson.json";
+	  File jsonArrayFile = new File(filepath);
+	  JsonPath jsonPath = JsonPath.from(jsonArrayFile);
+	  System.out.println("Total number of users/ID's : " +
+				 jsonPath.getString("size()"));
+	  String baseURI = e.readexcel(1, 14);
 	    RestAssured.baseURI = baseURI;
 	    String endpoint = e.readexcel(6,1);
 
 	    Response response = RestAssured.get(endpoint);
 	    String responseBody = response.getBody().prettyPrint();
-	    //		  System.out.println("Response Body is =>  " + responseBody);
+	    System.out.println(responseBody);
 	    int responseStatusCode = response.getStatusCode();
 	    System.out.println("************************************************");
 	    System.out.println("Status Code => "+ responseStatusCode);

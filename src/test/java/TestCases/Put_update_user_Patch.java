@@ -21,11 +21,11 @@ public class Put_update_user_Patch {
   public void PUT() throws BiffException, IOException {
 	  excel e = new excel();
 	  e.open("C:\\Users\\Vallivedu Mounika\\eclipse-workspace\\Api\\src\\test\\java\\TestData.xls");
-	  String baseURI = e.readexcel(1, 18);
+	  String baseURI = e.readexcel(1, 14);
 	  RestAssured.baseURI = baseURI;
-	  String endpoint = e.readexcel(6,8);
-	  String name = e.readexcel(1,8);
-	  String job = e.readexcel(2,8);
+	  String endpoint = e.readexcel(6,6);
+	  String name = e.readexcel(1,6);
+	  String job = e.readexcel(2,6);
 
 	  String j = "{\n"
               + "    \"name\": \""+ name +"\",\n"
@@ -51,16 +51,5 @@ public class Put_update_user_Patch {
           e.writexcel("TestCase",  13, 8, "Failed");
 
       }
-	  if(responseStatusCode==204)
-      {
-          e.writexcel("TestCase",  13, 9, "Passed");
-
-      }
-      else
-      {
-          e.writexcel("TestCase",  13, 9, "Failed");
-
-      }
-	  
   }
 }

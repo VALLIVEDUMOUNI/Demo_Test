@@ -24,11 +24,11 @@ public class Post_create {
   public void POST() throws BiffException, IOException {
 	  excel e = new excel();
 	  e.open("C:\\Users\\Vallivedu Mounika\\eclipse-workspace\\Api\\src\\test\\java\\TestData.xls");
-	  String baseURI = e.readexcel(1, 18);
+	  String baseURI = e.readexcel(1, 14);
 	  RestAssured.baseURI = baseURI;
-	  String endpoint = e.readexcel(6,7);
-	  String name = e.readexcel(1,7);
-	  String job = e.readexcel(2,7);
+	  String endpoint = e.readexcel(6,5);
+	  String name = e.readexcel(1,5);
+	  String job = e.readexcel(2,5);
 
 	  String j = "{\n"
 			  + "    \"name\": \""+ name +"\",\n"

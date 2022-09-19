@@ -19,9 +19,9 @@ public class Get_delayed_response {
   public void GET() throws BiffException, IOException {
 	  excel e = new excel();
 	  e.open("C:\\Users\\Vallivedu Mounika\\eclipse-workspace\\Api\\src\\test\\java\\TestData.xls");
-	  String baseURI = e.readexcel(1, 18);
+	  String baseURI = e.readexcel(1,14);
 	    RestAssured.baseURI = baseURI;
-	    String endpoint = e.readexcel(6,15);
+	    String endpoint = e.readexcel(6,11);
 		  Response response = RestAssured.get(endpoint);
 	  String responseBody = response.getBody().prettyPrint();
 //		System.out.println("Response Body is =>  " + responseBody);

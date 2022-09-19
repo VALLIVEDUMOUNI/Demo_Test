@@ -20,9 +20,9 @@ public class Delete_user {
   public void delete() throws BiffException, IOException {
 	  excel e = new excel();
 	  e.open("C:\\Users\\Vallivedu Mounika\\eclipse-workspace\\Api\\src\\test\\java\\TestData.xls");
-	  String baseURI = e.readexcel(1, 18);
+	  String baseURI = e.readexcel(1, 14);
 	  RestAssured.baseURI = baseURI;
-	  String endpoint = e.readexcel(6,10);
+	  String endpoint = e.readexcel(6,8);
 	  Response response = RestAssured.get(endpoint);
 	  RequestSpecification requestSpecification= RestAssured.given();
 	  requestSpecification.contentType(ContentType.JSON);
@@ -40,15 +40,6 @@ public class Delete_user {
       else
       {
           e.writexcel("TestCase",  13, 10, "Failed");
-      }
-	  if(response1.getStatusCode()==200)
-      {
-          e.writexcel("TestCase",  13, 11, "Passed");
-
-      }
-      else
-      {
-          e.writexcel("TestCase",  13, 11, "Failed");
       }
   }
 }

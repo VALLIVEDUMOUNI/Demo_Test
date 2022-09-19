@@ -21,11 +21,11 @@ public class Post_register_success {
 	  
 	  excel e = new excel();
 	  e.open("C:\\Users\\Vallivedu Mounika\\eclipse-workspace\\Api\\src\\test\\java\\TestData.xls");
-	  String baseURI = e.readexcel(1, 18);
+	  String baseURI = e.readexcel(1, 14);
 	  RestAssured.baseURI = baseURI;
-	  String endpoint = e.readexcel(6,11);
-	  String email = e.readexcel(3,11);
-	  String password = e.readexcel(4,11);
+	  String endpoint = e.readexcel(6,9);
+	  String email = e.readexcel(3,9);
+	  String password = e.readexcel(4,9);
 
       String j = "{\n"
               + "    \"email\": \""+ email +"\",\n"

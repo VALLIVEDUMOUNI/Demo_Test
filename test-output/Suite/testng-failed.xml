@@ -3,76 +3,11 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestCases.Get_single_user">
-        <methods>
-          <include name="GET"/>
-        </methods>
-      </class> <!-- TestCases.Get_single_user -->
-      <class name="TestCases.Post_register_unsuccess">
-        <methods>
-          <include name="POST"/>
-        </methods>
-      </class> <!-- TestCases.Post_register_unsuccess -->
-      <class name="TestCases.Get_delayed_response">
-        <methods>
-          <include name="GET"/>
-        </methods>
-      </class> <!-- TestCases.Get_delayed_response -->
-      <class name="TestCases.Post_create">
-        <methods>
-          <include name="POST"/>
-        </methods>
-      </class> <!-- TestCases.Post_create -->
-      <class name="TestCases.Get_single_resource_notfound">
-        <methods>
-          <include name="GET"/>
-        </methods>
-      </class> <!-- TestCases.Get_single_resource_notfound -->
-      <class name="TestCases.Get_list_users">
-        <methods>
-          <include name="GET"/>
-        </methods>
-      </class> <!-- TestCases.Get_list_users -->
-      <class name="TestCases.Get_list_resource">
-        <methods>
-          <include name="GET"/>
-        </methods>
-      </class> <!-- TestCases.Get_list_resource -->
       <class name="TestCases.Put_update_user_Patch">
         <methods>
           <include name="PUT"/>
         </methods>
       </class> <!-- TestCases.Put_update_user_Patch -->
-      <class name="TestCases.Post_login_unsuccess">
-        <methods>
-          <include name="POST"/>
-        </methods>
-      </class> <!-- TestCases.Post_login_unsuccess -->
-      <class name="TestCases.Post_login_success">
-        <methods>
-          <include name="POST"/>
-        </methods>
-      </class> <!-- TestCases.Post_login_success -->
-      <class name="TestCases.Post_register_success">
-        <methods>
-          <include name="POST"/>
-        </methods>
-      </class> <!-- TestCases.Post_register_success -->
-      <class name="TestCases.Get_single_resource">
-        <methods>
-          <include name="GET"/>
-        </methods>
-      </class> <!-- TestCases.Get_single_resource -->
-      <class name="TestCases.Delete_user">
-        <methods>
-          <include name="delete"/>
-        </methods>
-      </class> <!-- TestCases.Delete_user -->
-      <class name="TestCases.Get_single_user_notfound">
-        <methods>
-          <include name="GET"/>
-        </methods>
-      </class> <!-- TestCases.Get_single_user_notfound -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
